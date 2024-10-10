@@ -522,10 +522,10 @@ html {
     .home {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start; /* Aligned content to start */
+        align-items: flex-start; /* Aligned items to left */
         padding: 5rem 2rem;
-        text-align: center;
+        text-align: left; /* Align text to the left */
         min-height: 100vh; 
     }
 
@@ -536,11 +536,12 @@ html {
     .home-content {
         display: flex;
         flex-direction: column;
-        align-items: center; 
-        text-align: center; 
+        align-items: flex-start; /* Aligned items to the left */
+        text-align: left; /* Align text to the left */
         justify-content: center;
         margin-top: 3rem;
     }
+
     .navbar a {
         font-size: 1.6rem;
         margin-left: 2rem;
@@ -566,7 +567,6 @@ html {
         font-size: 2rem;
     }
 
-    /* Menu toggling */
     .navbar.active {
         right: 0;
     }
@@ -575,22 +575,24 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start; /* Aligned items to the left */
         padding: 5rem 5rem;
-        text-align: center;
+        text-align: left; /* Align text to the left */
     }
-    
+
     .home-content h1 {
         font-size: 5rem;
+        text-align: left; /* Align headers to the left */
     }
 
     .home-content h3 {
         font-size: 3rem;
+        text-align: left; /* Align sub-headers to the left */
     }
 
     .home-content p {
         font-size: 1.8rem;
-        text-align: center;
+        text-align: left; /* Align description to the left */
         margin-top: 2.5rem;
     }
 
@@ -615,24 +617,24 @@ html {
         height: 100%;
         background-color: var(--main-color);
         left: 50%;
-        transform: translateX(-50%); 
+        transform: translateX(-50%);
     }
 
     .timeline-item {
         position: relative;
         margin-bottom: 3rem;
-        padding: 1.5rem; 
-        border-radius: 15px; 
+        padding: 1.5rem;
+        border-radius: 15px;
     }
 
     .timeline-item:nth-child(odd) {
-        text-align: left; 
-        padding-right: 2rem; 
+        text-align: left;
+        padding-right: 2rem;
     }
 
     .timeline-item:nth-child(even) {
-        text-align: left; 
-        padding-left: 2rem; 
+        text-align: left;
+        padding-left: 2rem;
     }
 
     .timeline-dot {
@@ -641,15 +643,14 @@ html {
         background-color: var(--main-color);
         box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
         position: absolute;
-        left: 50%; 
-        transform: translateX(-50%); 
+        left: 50%;
+        transform: translateX(-50%);
         border-radius: 50%;
         top: 10px;
     }
 
-    
     .timeline-item h2 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
         font-weight: bold;
     }
 
@@ -667,10 +668,9 @@ html {
         font-size: 5rem;
     }
 
-    
-    .education h2, .skills h2, .projects h2{
-        font-size: 3rem; /* Set the desired smaller font size */
-        margin-bottom: 2rem; /* Adjust margin if necessary */
+    .education h2, .skills h2, .projects h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
     }
 
     video {
@@ -686,12 +686,12 @@ html {
     }
 
     .navbar a {
-        font-size: 1.4rem; 
+        font-size: 1.4rem;
     }
 
     .home {
         padding: 3rem 3rem;
-        text-align: center; 
+        text-align: left; 
     }
 
     .logo {
@@ -699,62 +699,66 @@ html {
     }
 
     .home-content {
-        align-items: center; 
-        margin-top: 2rem; 
+        align-items: flex-start; 
+        text-align: left; 
+        margin-top: 2rem;
     }
 
     .home-content h1 {
-        font-size: 2.8rem; 
+        font-size: 2.8rem;
+        text-align: left; 
     }
 
     .home-content h3 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
+        text-align: left; 
     }
 
     .home-content p {
-        font-size: 1.6rem; 
+        font-size: 1.6rem;
+        text-align: left; 
         margin-top: 2rem;
     }
 
     .home-img img {
-        width: 90vw; 
-        margin-top: 2rem; 
+        width: 90vw;
+        margin-top: 2rem;
     }
-    
+
     .education h2 {
-        font-size: 2rem; 
+        font-size: 2rem;
     }
-    
+
     .skills h2 {
-        font-size: 2rem; 
+        font-size: 2rem;
     }
 
     .education, .skills, .projects {
-        padding: 3rem 3rem; 
-        text-align: center; 
+        padding: 3rem 3rem;
+        text-align: center;
     }
 
     .projects h2 {
-        font-size: 2rem; 
+        font-size: 2rem;
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; 
-        gap: 3rem; 
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
     .project-item {
-        max-width: 100%; 
-        padding: 1rem; 
-        overflow: hidden; 
-        max-height: 570px; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: flex-start; 
+        max-width: 100%;
+        padding: 1rem;
+        overflow: hidden;
+        max-height: 570px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .timeline-item h2 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     .timeline-date {
@@ -766,7 +770,7 @@ html {
     }
 
     .timeline-content p {
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
     }
 
     .skills-info h4 {
@@ -778,15 +782,15 @@ html {
     }
 
     .project-item h3 {
-        font-size: 2rem; 
+        font-size: 2rem;
     }
 
     .project-item p {
-        font-size: 1.4rem; 
+        font-size: 1.4rem;
     }
 
     video {
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 }
