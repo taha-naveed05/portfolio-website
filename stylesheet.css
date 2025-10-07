@@ -20,7 +20,8 @@
 }
 
 html {
-    font-size: 65%;
+    font-size: 60%;
+    /* ADJUSTED from 65% to 60% to make the whole site appear smaller */
     overflow-x: hidden;
 }
 
@@ -143,7 +144,7 @@ span {
 .home-content p {
     font-size: 2rem;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.8;
     max-width: 100%;
 }
 
@@ -235,28 +236,57 @@ span {
 }
 
 @keyframes words {
-    0%, 20% {
+
+    0%,
+    20% {
         content: "Software Engineer";
     }
-    21%, 40% {
+
+    21%,
+    40% {
         content: "Web Designer";
     }
-    41%, 60% {
+
+    41%,
+    60% {
         content: "Front-End Designer";
     }
-    61%, 80% {
+
+    61%,
+    80% {
         content: "Web Developer";
     }
-    81%, 100% {
+
+    81%,
+    100% {
         content: "Programmer";
     }
 }
 
 @keyframes typing {
-    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
         width: 0;
     }
-    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
         width: calc(100% + 8px);
     }
 }
@@ -355,9 +385,9 @@ span {
 
 .timeline-content p {
     color: white;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 22px;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
 }
 
 ::-webkit-scrollbar {
@@ -373,87 +403,89 @@ span {
     width: 50px;
 }
 
+/* SKILLS STYLING */
 .skills {
-    background: var(--bg-color);
-    color: black;
+    background: var(--second-bg-color);
+    padding: 10rem 12%;
+    max-width: none;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
 }
 
 .skills h2 {
-    margin-bottom: 5rem;
-    color: white;
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
 }
 
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2.5rem;
+.skills-box-container {
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 20px var(--main-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+    padding: 3rem 5rem;
+    cursor: default;
 }
 
-.skills-box {
-    height: 350px;
-    background-color: var(--main-color);
-    border-radius: 3rem;
-    border: 5px solid transparent;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+.skills-box-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 30px var(--main-color);
 }
 
-.skills-box:hover {
-    background: white;
-    color: black;
-    border: 5px solid var(--main-color);
-    transform: scale(1.03);
-}
-
-.skills-box .skills-info {
+.skills-content {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    max-height: 200px;
-    justify-content: left;
-    align-items: baseline;
-    padding: 3rem 4rem;
+    align-items: center;
+    text-align: center;
 }
 
-.skills-info h4 {
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 10px;
+.skills-description {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 900px;
+    margin-bottom: 5rem;
+    color: #ccc;
 }
 
-.skills-info p {
-    font-size: 1.6rem;
+.skills-description span {
+    color: var(--main-color);
     font-weight: 600;
-    max-height: 100px;
-    line-height: 1.7;
 }
+
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.tech-icons .bx {
+    font-size: 6rem;
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: default;
+}
+
+.tech-icons .bx:hover {
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+/* END OF SKILLS STYLING */
+
 
 .projects {
     background-color: var(--second-bg-color);
     padding: 100px 15px;
-    text-align: center;
-}
-
-.projects h2 {
-    margin-bottom: 5rem;
-    color: var(--text-color);
-    font-size: 6rem;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
-.projects {
-    padding: 100px 0;
-    background: var(--second-bg-color);
     text-align: center;
 }
 
@@ -472,16 +504,15 @@ span {
 
 .project-item {
     background-color: var(--bg-color);
-    padding: 1.5rem;
-    border-radius: 1.5rem;
     border: 2px solid var(--main-color);
     box-shadow: 0 0 20px var(--main-color);
+
+    padding: 1.5rem;
+    border-radius: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 650px;
-    height: 750px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .project-item:hover {
@@ -497,8 +528,9 @@ span {
 
 .project-item p {
     color: var(--text-color);
-    font-size: 1.6rem;
-    line-height: 1.5;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
     flex-grow: 1;
 }
 
@@ -510,7 +542,8 @@ span {
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 60%;
+    /* Adjusted from 65% to 60% */
 }
 
 /* For devices with width <= 768px (Tablets and Mobile devices) */
@@ -522,11 +555,11 @@ html {
     .home {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* Aligned content to start */
-        align-items: flex-start; /* Aligned items to left */
+        justify-content: flex-start;
+        align-items: flex-start;
         padding: 5rem 2rem;
-        text-align: left; /* Align text to the left */
-        min-height: 100vh; 
+        text-align: left;
+        min-height: 100vh;
     }
 
     .logo {
@@ -536,8 +569,8 @@ html {
     .home-content {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Aligned items to the left */
-        text-align: left; /* Align text to the left */
+        align-items: flex-start;
+        text-align: left;
         justify-content: center;
         margin-top: 3rem;
     }
@@ -548,7 +581,7 @@ html {
     }
 
     #menu-icon {
-        display: block; 
+        display: block;
     }
 
     .navbar {
@@ -575,25 +608,26 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start; /* Aligned items to the left */
+        align-items: flex-start;
         padding: 5rem 5rem;
-        text-align: left; /* Align text to the left */
+        text-align: left;
     }
 
     .home-content h1 {
         font-size: 5rem;
-        text-align: left; /* Align headers to the left */
+        text-align: left;
     }
 
     .home-content h3 {
         font-size: 3rem;
-        text-align: left; /* Align sub-headers to the left */
+        text-align: left;
     }
 
     .home-content p {
         font-size: 1.8rem;
-        text-align: left; /* Align description to the left */
+        text-align: left;
         margin-top: 2.5rem;
+        line-height: 1.5;
     }
 
     .home-img img {
@@ -601,7 +635,9 @@ html {
         top: -100px;
     }
 
-    .education, .skills, .projects {
+    .education,
+    .skills,
+    .projects {
         padding: 5rem 4rem;
     }
 
@@ -654,6 +690,29 @@ html {
         font-weight: bold;
     }
 
+    .skills {
+        padding: 5rem 5%;
+    }
+
+    .skills-box-container {
+        max-width: 100%;
+        border-radius: 2rem;
+        padding: 3rem;
+    }
+
+    .skills-description {
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+    }
+
+    .tech-icons {
+        gap: 2.5rem;
+    }
+
+    .tech-icons .bx {
+        font-size: 4.5rem;
+    }
+
     .skills-container {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -668,7 +727,9 @@ html {
         font-size: 5rem;
     }
 
-    .education h2, .skills h2, .projects h2 {
+    .education h2,
+    .skills h2,
+    .projects h2 {
         font-size: 3rem;
         margin-bottom: 2rem;
     }
@@ -676,6 +737,22 @@ html {
     video {
         width: 100%;
         height: auto;
+    }
+
+    .timeline-content p {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    .project-item {
+        min-height: 500px;
+    }
+
+    .project-item p {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5;
     }
 }
 
@@ -691,7 +768,7 @@ html {
 
     .home {
         padding: 3rem 3rem;
-        text-align: left; 
+        text-align: left;
     }
 
     .logo {
@@ -699,25 +776,26 @@ html {
     }
 
     .home-content {
-        align-items: flex-start; 
-        text-align: left; 
+        align-items: flex-start;
+        text-align: left;
         margin-top: 2rem;
     }
 
     .home-content h1 {
         font-size: 2.8rem;
-        text-align: left; 
+        text-align: left;
     }
 
     .home-content h3 {
         font-size: 1.8rem;
-        text-align: left; 
+        text-align: left;
     }
 
     .home-content p {
         font-size: 1.6rem;
-        text-align: left; 
+        text-align: left;
         margin-top: 2rem;
+        line-height: 1.5;
     }
 
     .home-img img {
@@ -729,11 +807,36 @@ html {
         font-size: 2rem;
     }
 
-    .skills h2 {
-        font-size: 2rem;
+    .skills {
+        padding: 3rem 5%;
     }
 
-    .education, .skills, .projects {
+    .skills h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .skills-box-container {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .skills-description {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .tech-icons {
+        gap: 1.5rem;
+    }
+
+    .tech-icons .bx {
+        font-size: 4rem;
+    }
+
+    .education,
+    .skills,
+    .projects {
         padding: 3rem 3rem;
         text-align: center;
     }
@@ -751,7 +854,6 @@ html {
         max-width: 100%;
         padding: 1rem;
         overflow: hidden;
-        max-height: 570px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -770,7 +872,9 @@ html {
     }
 
     .timeline-content p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.5;
     }
 
     .skills-info h4 {
@@ -787,6 +891,8 @@ html {
 
     .project-item p {
         font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.5;
     }
 
     video {
