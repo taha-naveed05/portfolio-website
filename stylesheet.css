@@ -543,7 +543,6 @@ span {
 
 html {
     font-size: 60%;
-    /* Adjusted from 65% to 60% */
 }
 
 /* For devices with width <= 768px (Tablets and Mobile devices) */
@@ -899,4 +898,10 @@ html {
         width: 100%;
         height: auto;
     }
+}
+
+.tech-icons .bx,
+.social-icons .bx,
+#menu-icon {
+    font-family: 'boxicons' !important; 
 }
